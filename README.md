@@ -1,2 +1,42 @@
 # Arnie
-When you need a little Schwarzenegger
+I needed a command line Arnold Schwarzenegger. You need a command line Arnold Schwarzenegger.
+
+
+## Running
+```bash
+$ cargo run
+     I'LL BE BACK
+                       ____
+                     <((((((\\\
+                     /      . }}\
+                     ;--..--._|}}
+  (\                 '--/\--'  )
+   \\                | '-'  :'|
+    \\               . -==- .-|
+     \\               \.__.'   \--._
+     [\\          __.--|       //  _/'--.
+     \ \\       .'-._ ('-----'/ __/      \
+      \ \\     /   __>|      | '--.       |
+       \ \\   |   \   |     /    /       /
+        \ '\ /     \  |     |  _/       /
+         \  \       \ |     | /        /
+          \  \      \        /
+
+$ cargo run -- "Hello world"
+     HELLO WORLD
+                       ____
+                     <((((((\\\
+                     /      . }}\
+                     ;--..--._|}}
+  (\                 '--/\--'  )
+   \\                | '-'  :'|
+    \\               . -==- .-|
+     \\               \.__.'   \--._
+     [\\          __.--|       //  _/'--.
+     \ \\       .'-._ ('-----'/ __/      \
+      \ \\     /   __>|      | '--.       |
+       \ \\   |   \   |     /    /       /
+        \ '\ /     \  |     |  _/       /
+         \  \       \ |     | /        /
+          \  \      \        /
+```
