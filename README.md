@@ -3,6 +3,9 @@ I needed a command line Arnold Schwarzenegger. You need a command line Arnold Sc
 
 ## Installing
 ```bash
+# Clone the repo
+$ git clone https://github.com/JamesFator/Arnie.git
+$ cd Arnie
 # Build the binary
 $ cargo build --release
 # Place the binary somewhere in your PATH, I don't know.
