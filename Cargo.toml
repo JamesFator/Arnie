@@ -14,10 +14,10 @@ stdweb = { version = "0.4.20", optional = true }
 web = ["stdweb"]
 
 [[bin]]
-name = "cli"
-path = "src/cli.rs"
-
-[[bin]]
 name = "arnie_js"
 path = "src/js.rs"
 required-features = ["web"]
+
+[[bin]]
+name = "cli"
+path = "src/cli.rs"
