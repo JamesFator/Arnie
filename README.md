@@ -7,9 +7,19 @@ I needed a command line Arnold Schwarzenegger. You need a command line Arnold Sc
 $ git clone https://github.com/JamesFator/Arnie.git
 $ cd Arnie
 # Build the binary
-$ cargo build --release
+$ cargo build --bin cli --release
 # Place the binary somewhere in your PATH, I don't know.
 $ cp target/release/arnie /usr/local/bin/
+```
+
+## WebAssembly
+```bash
+# Install cargo web
+$ cargo install cargo-web
+# Build and host the js/wasm
+$ cargo web start --bin arnie_js --features web
+# Access http://127.0.0.1:8000
+# Use the query string to add some spice http://127.0.0.1:8000/?phrase=UH%20OH,%20STINKY!
 ```
 
 

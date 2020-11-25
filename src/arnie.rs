@@ -1,5 +1,4 @@
-use rand::Rng;
-use std::env;
+use oorandom::Rand32;
 
 const ARNIE_ASCII: &str = r#"
      {}
@@ -41,7 +40,7 @@ const LE_MONKE_ASCII: &str = r#"
       ||  / / O| | O\ \  ||    {}
       \\_/| \__| |__/ |\_//
        `-'\  .-n-n-.  /`-'
-        .-\/       \/-.
+        _.-\/       \/-._
       .'   (\`.___.'/)   `.
      /      \`.___.'/      `.
     /        `.___.'         \
@@ -50,30 +49,29 @@ const LE_MONKE_ASCII: &str = r#"
     |     |             | \     \
      \     \            |  \     \
       \     \           |.' `.    \
-       .    \         .'     .   \
-  ..   .   `-. ___ /        /.  `.
-'    "-._|`\    .__)       .'  /    .
+       `.    \         .'     `.   \
+  _.._   `.   `-. ___ /        /`.  `.
+'    "-._|`\    `.__)       .'   /    `.
 |         `-.\     \/      .'   / /\  )|\.
  \          _/ / /|/     .'    (_/ / / | \)
-  `._      (_/_/-/   ..'         (_/| |\)
+  `._      (__/_/-/   ..'         (_/| |\_)
      ``--._____.-(     `.            `-'
-                  --.   .
+                  `--.   `.
                     (_/\ \\\
                        /_///
 "#;
 const LE_MONKE_PHRASE: &str = "UH OH, STINKY!";
 const LOL_JK: &str = "--LOL-JK";
 
-fn main() {
-    let args: Vec<String> = env::args().skip(1).collect();
-    let mut phrase: &str = &args.join(" ").to_ascii_uppercase();
+pub fn get_arnie(phrase: String, seed: u64) -> String {
+    let mut phrase: &str = &phrase.to_ascii_uppercase();
     let output: &str;
-    let mut rng = rand::thread_rng();
+    let mut rng = Rand32::new(seed);
     if phrase == LOL_JK {
-        return;
+        return "".to_string();
     } else if phrase == LE_MONKE_PHRASE {
         output = LE_MONKE_ASCII;
-    } else if rng.gen_range(1, 100) == 1 {
+    } else if rng.rand_float() < 0.01 {
         output = ARNIE_RARE_ASCII;
         if phrase.is_empty() {
             phrase = ARNIE_RARE_PHRASE;
@@ -84,5 +82,5 @@ fn main() {
             phrase = ARNIE_PHRASE;
         }
     }
-    println!("{}", output.replace("{}", phrase));
+    output.replace("{}", phrase)
 }
