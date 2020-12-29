@@ -1,6 +1,8 @@
 # Arnie
 I needed a command line Arnold Schwarzenegger. You need a command line Arnold Schwarzenegger.
 
+[Try the wasm version here!](https://jamesfator.com/arnie/?phrase=Hello%20GitHub!)
+
 ## Installing
 ```bash
 # Clone the repo
